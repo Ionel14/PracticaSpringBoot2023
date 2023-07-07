@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+Hello from index
+<br>
+<span th:text ="${greetings}"/>
+<span th:text ="${wew}"/>
+
+
+<br>
+<div th:each="car : ${cars}">
+    <span th:text ="${car}"/>
+    <br>
+</div>
+
+<div>
+    <table>
+        <thead>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Salary</td>
+        </thead>
+
+        <tbody>
+        <tr th:each="employee : ${employees}">
+            <td th:text = "${employee.id}" />
+            <td th:text = "${employee.name}" />
+            <td th:text = "${employee.salary}" />
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+</body>
+</html>
